@@ -5,3 +5,5 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+boards = Board.create([{title: "biology"}, {title: "chemistry"}, {title: "physics"}, {title: "computer science"}, {title: "mathematics"}, {title: "statistics"}, {title: "biochemistry"}, {title: "geology"}, {title: "thermodynamics"}, {title: "cell biology"}, {title: "epidemiology"}])
