@@ -1,16 +1,14 @@
 class Api::PostsController < ApplicationController
   before_action :authenticate_user, except: [:show, :index]
   def index
-    @posts = Post.all
+    @posts = Post.includes(:user)
     render "index.json.jb"
   end
   def subscribed_index
     board_ids = current_user.boards.map do |board|
       board.id
     end
-    #NOT SANITIZED?
     @posts = Post.where(board_id: board_ids)
-    #NOT SANITIZED?
     render "index.json.jb"
   end
   def show
