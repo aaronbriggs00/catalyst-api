@@ -24,10 +24,11 @@ Rails.application.routes.draw do
     # delete "/comments/:id" => "comments#delete"
 
     # posts
+    get "/posts/subscription" => "posts#subscribed_index"
+    
     resources :posts do
     end
     # get "/posts" => "posts#index"
-    # get "/posts/subscription" => "posts#subscribed_index"
     # get "/posts/:id" => "posts#show"
     # post "/posts" => "posts#create"
     # patch "/posts/:id" => "posts#update"
